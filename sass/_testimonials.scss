@@ -1,0 +1,67 @@
+.testimonials {
+    grid-column: 1 / -1;
+    margin: 15rem 4rem; 
+}
+
+.testimonial {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 5rem;
+}
+
+.client {
+    background-color: $color-grey-light-1;
+    position: relative;
+    color: #000;
+    padding: 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: $color-primary-dark;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        margin-top: -4rem;
+        margin-left: -1rem;
+    }
+
+    &::after {
+        content: "\201C";
+        position: absolute;
+        color: $color-grey-light-1;
+        top: -3rem;
+        font-size: 6rem;
+    }
+
+    &__review {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+    }
+
+    &__info {
+        margin-top: 3rem;
+        display: flex;
+
+        &--box {
+            margin-left: 1rem;
+        }
+
+        &--name {
+            font-size: 1.2rem;
+        }
+
+        &--job {
+            text-transform: uppercase;
+            color: $color-grey-dark-2;
+        }
+    }
+
+    & img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+
+
+}

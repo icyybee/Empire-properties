@@ -1,0 +1,64 @@
+.realtors {
+    grid-column: 1 / -1;
+    margin: 5rem 5rem; 
+}
+
+.realtor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+}
+
+.agent {
+    
+    &:hover > &__links {
+        display: block;
+    }
+
+    &__links {
+        display: none;
+        background-color: $color-secondary;
+        opacity: .7;
+        transform: translateY(-110%);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    & svg {
+        fill: $color-grey-light-2;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        margin-right: 1.2rem;
+
+        &:hover {
+            fill: $color-primary;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        cursor: pointer;
+        backface-visibility: hidden;
+        transition:  all .5s ease;
+
+        &:hover {
+            filter: blur(1px);
+        }
+    }
+
+    &:hover > &__name {
+        margin-top: -3rem;
+    }
+
+    &__name {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    &__job {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}

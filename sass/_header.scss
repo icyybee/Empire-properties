@@ -1,0 +1,210 @@
+.header {
+    background-color: $color-grey-dark-1;
+    grid-column: 1 / -1;
+    background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    //padding: 8rem;
+    padding-top: 4rem;
+
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+    justify-content: center;
+
+    &__nav {
+        grid-row: 1 / 2;
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__logo {
+        grid-column: 1 / 2;
+        height: 5rem;
+    }
+
+    &__menu {
+        grid-column: 2 / 3;
+        list-style: none;
+        line-height: 5rem;
+
+        display: flex;
+
+        & li {
+            margin-right: 3rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+            
+            & a {
+                color: $color-grey-light-2;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-grey-dark-2;
+                }
+            }
+        }
+    }
+
+    &__search {
+        grid-column: 3 / -1;
+        justify-self: flex-end;
+
+        display: flex;
+
+        & svg {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+            fill: $color-grey-light-2;
+            margin-top: 1.2rem;
+            margin-right: 1rem;
+
+            &:hover {
+                fill: $color-grey-dark-2;
+            }
+        }
+
+        &--btn {
+            padding: 1rem 2rem;
+            border-radius: 10rem;
+            font-weight: 300;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: $color-grey-light-1;
+            line-height: 2rem;
+            background-image: linear-gradient(to right, $color-primary-dark, $color-grey-dark-2);
+            transition: .5s;
+            cursor: pointer;
+            height: 4rem;
+            width: fit-content;
+            text-align: center;
+            border: none;
+
+            &:hover {
+                background-image: linear-gradient(to left, $color-primary-dark, $color-grey-dark-2);
+            }
+        }
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        box-shadow: 5px 5px 5px 5px #000;
+        justify-items: center;
+        margin: auto;
+
+        &--head {
+            grid-column: 1/ -1;
+            grid-row: 1 / 2;
+
+            display: flex;
+            justify-content: center;
+
+            & p {
+                color: $color-grey-light-2;
+                font-size: 1.5rem;
+            }
+        }
+
+        &--cta {
+            //width: 4rem;
+            //height: 4rem;
+            border: none;
+            border-radius: 0;
+            text-transform: uppercase;
+            padding: 1.1rem 3rem;
+            cursor: pointer;
+
+            & svg {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        &--category {
+            grid-column: 1 / -1;
+
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__btn {
+        justify-self: center;
+        margin-top: 5rem;
+    }
+}
+
+.invisible {
+    display: none;
+
+    //display: flex;
+    margin-top: -1rem;
+
+    & p {
+        background-image: linear-gradient(to left, $color-primary-dark, $color-grey-dark-2);
+        width: 8rem;
+        height: 4rem;
+        text-align: center;
+        line-height: 3.5rem;
+    }
+}
+
+.visible {
+    //display: none;
+    
+    display: flex;
+    margin-top: -1rem;
+
+    & p {
+        background-image: linear-gradient(to left, $color-primary-dark, $color-grey-dark-2);
+        width: 8rem;
+        height: 4rem;
+        text-align: center;
+        line-height: 3.5rem;
+    }
+}
+
+.arrow {
+    width: 8rem;
+    height: 4rem;
+    background-color: $color-grey-light-2;
+    text-align: center;
+    line-height: 5rem;
+
+}
+
+.box__title {
+    margin-right: 3rem;
+    font-size: 1.5rem;
+
+    &--head {
+        margin-bottom: 1rem;
+    }
+
+    & select {
+        color: #fff;
+        background-color: transparent;
+        width: 20rem;
+        height: 3rem;
+        cursor: pointer;
+        border-radius: .25rem;
+        border: 1px solid grey;
+    }
+
+    & option {
+        color: $color-primary-dark;
+        transition: all .2s;
+
+        &:hover {
+            color: #000;
+            border: 1px solid grey;
+        }
+    }
+}

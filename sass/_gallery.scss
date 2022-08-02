@@ -1,0 +1,57 @@
+.gallery {
+    grid-column: 1 / -1;
+    margin: 3rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    &__item {
+        position: relative;
+
+        &:hover > &--zoom {
+            display: block;
+        }
+
+        &--zoom {
+            display: none;    
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: $color-primary-dark;
+                border-radius: 50%;
+                width: 4rem;
+                height: 4rem;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            & svg {
+                position: absolute;
+                fill: $color-grey-light-1;
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                top: 12rem;
+                left: 8.6rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 200%;
+        object-fit: cover;
+        display: block;
+        cursor: pointer;
+        overflow: hidden;
+        opacity: .9;
+        transition: all .5s;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(.95);
+        }
+    }
+}
