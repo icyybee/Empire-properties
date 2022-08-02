@@ -4,12 +4,25 @@
 
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    height: 11rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        height: 13rem;
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+        height: 0;
+    }
 
     &__item {
         position: relative;
 
         &:hover > &--zoom {
             display: block;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
         }
 
         &--zoom {
@@ -52,6 +65,10 @@
         &:hover {
             opacity: 1;
             transform: scale(.95);
+
+            @media only screen and (max-width: $bp-medium) {
+                transform: none;
+            }
         }
     }
 }

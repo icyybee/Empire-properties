@@ -2,16 +2,17 @@
     grid-column: 2 / 10;
 
     margin: 10rem 0;
+}
 
-    /*@supports(display: grid) {
+.about {
+    @supports(display: grid) {
         display: grid;
         //grid-template-columns: repeat(3, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         grid-gap: 6rem;
         align-items: start;
-    }*/
+    }
 }
-
 
 .feature {
 
@@ -19,10 +20,10 @@
     width: 33.3333%;
     margin-bottom: 6rem;
 
-    /*@supports(display: grid) {
+    @supports(display: grid) {
         width: auto;
         margin-bottom: 0;
-    }*/
+    }
 
     display: grid;
     grid-template-columns: min-content 1fr;
@@ -51,6 +52,11 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5rem;
     
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-row-gap: 5rem;
+    }
+
     &__feature {
         text-align: center;
         

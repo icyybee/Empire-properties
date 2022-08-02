@@ -6,6 +6,11 @@
         justify-self: center;
         margin-top: 3rem;
         grid-column: 2 / 2;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-left: -10rem;
+            justify-self: auto;
+        }
     }
 }
 

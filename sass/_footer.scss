@@ -4,11 +4,19 @@
     margin-top: 9.5rem;
     padding: 5rem;
     
+    @media only screen and (max-width: $bp-small) {
+        padding: 1rem;
+    }
+
     &__head {
         color: $color-grey-light-1;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column-gap: 2rem;
+        }
     }
     
     & svg {
