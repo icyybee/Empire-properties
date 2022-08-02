@@ -1,26 +1,22 @@
 .gallery {
     grid-column: 1 / -1;
     margin: 3rem 0;
+    margin-bottom: -1rem;
 
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    height: 11rem;
 
     @media only screen and (max-width: $bp-medium) {
-        height: 13rem;
+        grid-template-columns: repeat(5, 1fr);
     }
     
-    @media only screen and (max-width: $bp-small) {
-        height: 0;
-    }
-
     &__item {
         position: relative;
 
         &:hover > &--zoom {
             display: block;
 
-            @media only screen and (max-width: $bp-medium) {
+            @media only screen and (max-width: $bp-large) {
                 display: none;
             }
         }
@@ -49,6 +45,14 @@
                 left: 8.6rem;
                 cursor: pointer;
             }
+        }
+
+        &--1,
+        &--5 {
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }            
         }
     }
 
