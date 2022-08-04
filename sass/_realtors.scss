@@ -1,15 +1,13 @@
 .realtors {
     grid-column: 1 / -1;
-    margin: 5rem 5rem; 
-}
-
-.realtor {
+    margin: 5rem 5rem;
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 3rem;
 
-    @media only screen and (max-width: $bp-medium) {
-        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    &__head {
+        grid-column: 1 / -1;
     }
 }
 
@@ -59,10 +57,18 @@
     &__name {
         text-align: center;
         font-size: 1.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+        }
     }
 
     &__job {
         text-align: center;
         font-size: 1.2rem;
+    
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
     }
 }

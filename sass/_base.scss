@@ -13,6 +13,7 @@ $color-grey-dark-2: #6D5D4B;
 // FONTS VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+$font-design: 'Millik', 'Times New Roman', sans-serif;
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em;   // 1200px
@@ -55,4 +56,8 @@ body {
     display: grid;
     grid-template-rows: 100vh repeat(7, min-content);
     grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 90vh repeat(7, min-content);
+    }
 }

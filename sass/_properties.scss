@@ -2,23 +2,34 @@
     grid-column: 2 / 10;
     margin: 15rem 0; 
 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+    margin-top: 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+        display: block;
+        margin: 7rem 0;
+    }
+    
     &__btn {
         justify-self: center;
         margin-top: 3rem;
         grid-column: 2 / 2;
 
         @media only screen and (max-width: $bp-medium) {
-            margin-left: -10rem;
-            justify-self: auto;
+            grid-column: 1 / -1;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            margin: auto;
         }
     }
-}
 
-.homes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 7rem;
-    margin-top: 3rem;
+    &__head {
+        grid-column: 1 / -1;
+    }
 }
 
 .home {
@@ -27,6 +38,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 3.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 6rem 0;
+    }
 
     &__img {
         width: 100%;

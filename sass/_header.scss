@@ -97,7 +97,14 @@
             border: none;
 
             @media only screen and (max-width: $bp-small) {
-                font-size: 1.1rem;
+                align-items: center;
+                border-radius: 1rem;
+                display: inline-flex;
+                font-size: 1.6rem;
+                font-weight: 500;
+                justify-content: flex-start;
+                padding: 3rem 3rem;
+                transition: all .3s ease;
             }
 
             &:hover {
@@ -115,12 +122,17 @@
         justify-items: center;
         margin: auto;
 
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+
         &--head {
             grid-column: 1/ -1;
             grid-row: 1 / 2;
 
             display: flex;
             justify-content: center;
+            margin-top: 2rem;
 
             & p {
                 color: $color-grey-light-2;
@@ -148,12 +160,17 @@
 
             display: flex;
             justify-content: center;
+            margin-left: 3rem;
         }
     }
 
     &__btn {
         justify-self: center;
         margin-top: 5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            justify-self: left;
+        }
     }
 }
 
@@ -213,10 +230,11 @@
         color: #fff;
         background-color: transparent;
         width: 20rem;
-        height: 3rem;
+        height: 3.1rem;
         cursor: pointer;
         border-radius: .25rem;
         border: 1px solid grey;
+        padding: 3px;
 
         @media only screen and (max-width: $bp-small) {
             width: 14rem;
@@ -248,10 +266,10 @@
 
     &__button {
         background-color: $color-primary-dark;
-        height: 7rem;
-        width: 7rem;
+        height: 5rem;
+        width: 5rem;
         position: fixed;
-        top: 3rem;
+        top: 5rem;
         right: 3rem;
         border-radius: 50%;
         z-index: 2000;
@@ -261,11 +279,11 @@
     }
 
     &__background {
-        height: 6rem;
-        width: 6rem;
+        height: 4rem;
+        width: 4rem;
         border-radius: 50%;
         position: fixed;
-        top: 3.5rem;
+        top: 5.5rem;
         right: 3.5rem;
         background-image: radial-gradient($color-primary, $color-primary-dark);
         z-index: 1000;
@@ -282,10 +300,6 @@
         opacity: 0;
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-        @media only screen and (max-width: $bp-smallest) {
-            margin-top: 10rem;
-        }
     }
 
     &__list {
@@ -345,7 +359,7 @@
     //ICON
     &__icon {
         position: relative;
-        margin-top: 3.5rem;
+        margin-top: 2.5rem;
 
         &,
         &::before,
