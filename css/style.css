@@ -1,3 +1,9 @@
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -26,6 +32,10 @@
     opacity: 1;
     transform: translate(0); } }
 
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn; }
+
 @keyframes zoomIn {
   0% {
     opacity: 0;
@@ -39,6 +49,10 @@
   100% {
     opacity: 1; } }
 
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -48,6 +62,22 @@
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+  opacity: 1; }
 
 *,
 *::before,
@@ -107,8 +137,9 @@ body {
   line-height: 1;
   text-align: center;
   margin-bottom: 5rem;
-  animation-name: zoomIn;
-  animation-duration: 1s; }
+  /*animation-name: zoomIn;
+    animation-duration: 1s;
+    */ }
   @media only screen and (max-width: 37.5em) {
     .heading-2 {
       font-size: 2rem;
@@ -505,8 +536,9 @@ body {
   float: left;
   width: 33.3333%;
   margin-bottom: 6rem;
-  animation-name: fadeIn;
-  animation-duration: 1s;
+  /*animation-name: fadeIn;
+    animation-duration: 1s;
+    */
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-row-gap: 1.5rem;
@@ -534,8 +566,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-column-gap: 4rem;
-  animation-name: fadeInUp;
-  animation-duration: 1s; }
+  /*    animation-name: fadeInUp;
+    animation-duration: 1s;
+    */ }
   @media only screen and (max-width: 50em) {
     .rate {
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -794,8 +827,6 @@ body {
     fill: #6D5D4B;
     margin-right: 1rem;
     cursor: pointer; }
-    .footer svg:hover > .footer__section--nav {
-      display: flex; }
   .footer__contact--head {
     margin: 4rem 0;
     font-size: 1.5rem; }
@@ -843,15 +874,14 @@ body {
     color: inherit;
     margin-bottom: 2rem; }
   .footer__section--nav {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     border-bottom: 1px solid #B28451;
-    height: auto;
+    height: 0;
     margin-bottom: 3rem;
-    overflow: hidden;
-    padding-bottom: 3rem; }
+    overflow: hidden; }
   .footer__section--title {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -893,5 +923,6 @@ body {
     margin-top: 2rem;
     position: absolute; }
 
-.content__active {
-  height: 15rem; }
+.footer__section--nav.content__active {
+  height: auto;
+  padding-bottom: 3rem; }

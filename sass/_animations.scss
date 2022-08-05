@@ -1,5 +1,7 @@
 .animated {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
@@ -47,6 +49,11 @@
     }
 }
 
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
 @keyframes zoomIn {
     0% {
       opacity: 0;
@@ -68,6 +75,11 @@
     }
 }
 
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -82,14 +94,22 @@
     }
 }
 
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
 //js animations
 .js--wp-1,
-.js--wp-2 {
+.js--wp-2,
+.js--wp-3 {
   opacity: 0;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
 .js--wp-1.animated,
-.js--wp-2.animated {
-  opacity: 1; 
+.js--wp-2.animated,
+.js--wp-3.animated {
+  opacity: 1;
 }

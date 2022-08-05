@@ -115,7 +115,7 @@
     </header>
 
     <section class="features" id="features">
-        <h2 class="heading-2 features__head">Why we are the best</h2>
+        <h2 class="heading-2 features__head js--wp-3">Why we are the best</h2>
         <div class="feature js--wp-1">
             <svg class="feature__icon">
                 <use xlink:href="img/sprite2.svg#icon-global"></use>
@@ -192,7 +192,7 @@
     </div>
 
     <section class="properties" id="properties">
-        <h2 class="heading-2 properties__head">Popular properties</h2>
+        <h2 class="heading-2 properties__head js--wp-3">Popular properties</h2>
         <div class="home">
             <img src="img/house-1.jpeg" alt="House 1" class="home__img">
             <div class="header__search--btn house__btn">For Rent</div>
@@ -401,7 +401,7 @@
     </section>
 
     <section class="realtors" id="realtors">
-        <h2 class="heading-2 realtors__head">Our Agents</h2>
+        <h2 class="heading-2 realtors__head js--wp-3">Our Agents</h2>
         <div class="agent">
             <img src="./img/realtor-2.jpeg" alt="agent 1" class="agent__img">
             <div class="agent__links">
@@ -472,7 +472,7 @@
     </section>
 
     <section class="testimonials">
-        <h2 class="heading-2 testimonials__head">Clients we help</h2>
+        <h2 class="heading-2 testimonials__head js--wp-3">Clients we help</h2>
         <div class="client">
             <div class="client__review">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam cum molestias ex vero laboriosam
@@ -807,14 +807,14 @@
         <div class="footer__mobile">
             <div class="footer__mobile--head">
                 <div class="footer__mobile--section">
-                    <div class="footer__section--head">
-                        <h6 class="footer__section--title js__footer head__active" onclick="opentab('connect')">Connect</h6>
+                    <div class="footer__section--head  js__footer" onclick="opentab('connect')">
+                        <h6 class="footer__section--title">Connect</h6>
                         <svg>
                             <use xlink:href="img/sprite.svg#icon-cheveron-down"></use>
                         </svg>
                     </div>
 
-                    <div class="footer__section--nav js__nav content__active" id="connect">
+                    <div class="footer__section--nav js__nav" id="connect">
                         <a href="mailto:empireproperties@gmail.com" class="footer__section--link">empireproperties@gmail.com</a>
                         <a href="#" class="footer__section--link">+234 812 546 7960</a>
                         <a href="#" class="footer__section--link">No.6 GRA, Rivers state, Nigeria</a>
@@ -822,8 +822,8 @@
                 </div>
 
                 <div class="footer__mobile--section">
-                    <div class="footer__section--head">
-                        <h6 class="footer__section--title js__footer" onclick="opentab('offers')">Offers</h6>
+                    <div class="footer__section--head js__footer" onclick="opentab('offers')">
+                        <h6 class="footer__section--title">Offers</h6>
                         <svg>
                             <use xlink:href="img/sprite.svg#icon-cheveron-down"></use>
                         </svg>
@@ -838,8 +838,8 @@
                 </div>
 
                 <div class="footer__mobile--section">
-                    <div class="footer__section--head">
-                        <h6 class="footer__section--title js__footer" onclick="opentab('company')">Company</h6>
+                    <div class="footer__section--head js__footer" onclick="opentab('company')">
+                        <h6 class="footer__section--title">Company</h6>
                         <svg>
                             <use xlink:href="img/sprite.svg#icon-cheveron-down"></use>
                         </svg>
@@ -854,8 +854,8 @@
                 </div>
 
                 <div class="footer__mobile--section">
-                    <div class="footer__section--head">
-                        <h6 class="footer__section--title js__footer" onclick="opentab('links')">Quick Links</h6>
+                    <div class="footer__section--head js__footer" onclick="opentab('company')">
+                        <h6 class="footer__section--title" onclick="opentab('links')">Quick Links</h6>
                         <svg>
                             <use xlink:href="img/sprite.svg#icon-cheveron-down"></use>
                         </svg>
@@ -874,8 +874,14 @@
         </div>
     </footer>
 
-    <script src="./js/index.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/index.js"></script>
+    
 </body>
 
 </html>

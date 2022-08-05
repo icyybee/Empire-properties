@@ -15,8 +15,8 @@ function carousel() {
 }
 
 //footer
-var js__footer = document.getElementsByClassName('js__footer');
-var js__nav = document.getElementsByClassName('js__nav');
+var js__footers = document.getElementsByClassName('js__footer');
+var js__navs = document.getElementsByClassName('js__nav');
 function opentab(tabname) {
   for(js__footer of js__footers) {
     js__footer.classList.remove('head__active');
@@ -29,14 +29,22 @@ function opentab(tabname) {
 }
 
 //animation
-$('.js--wp-1').waypoint(function(direction) {
-  $('.js--wp-1').addClass('animated fadeIn');
-}, {
-  offset: '50%',
-});
+$(document).ready(function() {
+  $('.js--wp-1').waypoint(function(direction) {
+    $('.js--wp-1').addClass('animated fadeIn');
+  }, {
+    offset: '50%'
+  });
 
-$('.js--wp-2').waypoint(function(direction) {
-  $('.js--wp-2').addClass('animated fadeInUp');
-}, {
-  offset: '50%',
+  $('.js--wp-2').waypoint(function(direction) {
+    $('.js--wp-2').addClass('animated fadeInUp');
+  }, {
+    offset: '50%'
+  });
+
+  $('.js--wp-3').waypoint(function(direction) {
+    $('.js--wp-3').addClass('animated zoomIn');
+  }, {
+    offset: '50%'
+  });
 });
