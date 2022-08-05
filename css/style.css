@@ -1,3 +1,54 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
 *,
 *::before,
 *::after {
@@ -39,7 +90,10 @@ body {
   font-size: 4.5rem;
   color: #f9f7f6;
   line-height: 1;
-  text-align: center; }
+  text-align: center;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
   @media only screen and (max-width: 37.5em) {
     .heading-1 {
       font-size: 5rem;
@@ -52,7 +106,9 @@ body {
   text-transform: uppercase;
   line-height: 1;
   text-align: center;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  animation-name: zoomIn;
+  animation-duration: 1s; }
   @media only screen and (max-width: 37.5em) {
     .heading-2 {
       font-size: 2rem;
@@ -166,7 +222,9 @@ body {
       height: 4rem;
       width: fit-content;
       text-align: center;
-      border: none; }
+      border: none;
+      animation: moveInBottom .5s ease-out .75s;
+      animation-fill-mode: backwards; }
       @media only screen and (max-width: 37.5em) {
         .header__search--btn {
           align-items: center;
@@ -185,7 +243,8 @@ body {
     grid-template-rows: repeat(2, 1fr);
     box-shadow: 5px 5px 5px 5px #000;
     justify-items: center;
-    margin: auto; }
+    margin: auto;
+    animation: moveInRight 1s ease-out; }
     @media only screen and (max-width: 37.5em) {
       .header__box {
         display: none; } }
@@ -446,6 +505,8 @@ body {
   float: left;
   width: 33.3333%;
   margin-bottom: 6rem;
+  animation-name: fadeIn;
+  animation-duration: 1s;
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-row-gap: 1.5rem;
@@ -472,7 +533,9 @@ body {
   margin-bottom: 10rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-column-gap: 4rem; }
+  grid-column-gap: 4rem;
+  animation-name: fadeInUp;
+  animation-duration: 1s; }
   @media only screen and (max-width: 50em) {
     .rate {
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));

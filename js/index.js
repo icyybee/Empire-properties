@@ -27,3 +27,16 @@ function opentab(tabname) {
   event.currentTarget.classList.add('head__active');
   document.getElementById(tabname).classList.add('content__active');
 }
+
+//animation
+$('.js--wp-1').waypoint(function(direction) {
+  $('.js--wp-1').addClass('animated fadeIn');
+}, {
+  offset: '50%',
+});
+
+$('.js--wp-2').waypoint(function(direction) {
+  $('.js--wp-2').addClass('animated fadeInUp');
+}, {
+  offset: '50%',
+});

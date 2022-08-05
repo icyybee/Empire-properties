@@ -96,6 +96,9 @@
             text-align: center;
             border: none;
 
+            animation: moveInBottom .5s ease-out .75s;
+            animation-fill-mode: backwards;
+
             @media only screen and (max-width: $bp-small) {
                 align-items: center;
                 border-radius: 1rem;
@@ -121,6 +124,8 @@
         box-shadow: 5px 5px 5px 5px #000;
         justify-items: center;
         margin: auto;
+
+        animation: moveInRight 1s ease-out;
 
         @media only screen and (max-width: $bp-small) {
             display: none;
